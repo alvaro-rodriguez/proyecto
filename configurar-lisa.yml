@@ -1,0 +1,26 @@
+---
+ - hosts: local
+   become: yes
+   become_user: root
+   tasks:
+    - name: instalación ssh lisa
+      lxc_container:
+        name: lisa
+        container_command: yum update | yum install openssh-server sshpass sudo.x86_64  -y
+
+    - name: creación de usuario
+      lxc_container:
+        name: lisa
+        container_command: useradd usuario -s /bin/bash -m 
+
+    - name: configuración del usuario
+      lxc_container:
+        name: lisa
+        container_command: |
+          echo -e "usuario\nusuario" | passwd usuario
+
+    - name: configuración de sudo
+      lxc_container:
+        name: lisa
+        container_command: |
+          echo "usuario ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers

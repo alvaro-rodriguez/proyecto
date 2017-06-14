@@ -1,0 +1,14 @@
+--- 
+ - hosts: local
+   become: yes
+   become_user: root
+   
+   tasks:
+
+    - name: prueba contenedor debian
+      lxc_container:
+        name: debian
+        container_log: true
+        template: debian
+        state: started
+        template_options: --release jessie

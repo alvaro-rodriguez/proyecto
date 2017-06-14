@@ -1,0 +1,10 @@
+---
+ - hosts: barney
+   become: yes
+   become_user: root
+   vars_files:
+    - roles/dns/files/ips.yml
+   vars:
+     barney: "{{ barney }}"
+   roles: 
+    - dns 

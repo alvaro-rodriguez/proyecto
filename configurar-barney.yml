@@ -1,0 +1,26 @@
+---
+ - hosts: local
+   become: yes
+   become_user: root
+   tasks:
+    - name: instalación ssh barney
+      lxc_container:
+        name: barney
+        container_command: apt-get update | apt-get install openssh-server sshpass sudo python-minimal -y
+
+    - name: creación de usuario
+      lxc_container:
+        name: barney
+        container_command: useradd usuario -s /bin/bash -m 
+
+    - name: configuración del usuario
+      lxc_container:
+        name: barney
+        container_command: |
+          echo -e "usuario\nusuario" | passwd usuario
+
+    - name: configuración de sudo
+      lxc_container:
+        name: barney
+        container_command: |
+          echo "usuario ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers

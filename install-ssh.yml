@@ -1,0 +1,14 @@
+---
+ - hosts: local
+   become: yes
+   become_user: root
+   tasks:
+    - name: rpueba instalación ssh ubuntu-prueba_become
+      lxc_container:
+        name: ubuntu-prueba_become 
+        container_command: apt-get install openssh-server -y    
+
+    - name: sed
+      lxc_container:
+        name: ubuntu-prueba_become
+        container_command: sed -i 's/prohibit-password/yes/' /etc/ssh/sshd_config

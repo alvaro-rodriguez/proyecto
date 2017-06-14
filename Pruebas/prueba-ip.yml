@@ -1,0 +1,11 @@
+---
+ - hosts: local
+   become: yes 
+   become_user: root
+   tasks:
+    - name: Run a command in a container and ensure its in a "stopped" state.
+      lxc_container:
+        name: ubuntu-prueba 
+        state: stopped
+        container_command:  |
+          echo 'hello world.' | tee /opt/stopped

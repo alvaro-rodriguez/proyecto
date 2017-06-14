@@ -1,0 +1,12 @@
+---
+ - hosts: local
+   sudo_user: usuario 
+   tasks:
+
+    - name: Prueba sudo_user
+      lxc_container:
+        name: ubuntu-temporal
+        container_log: true
+        template: ubuntu
+        state: started
+        template_options: --release trusty

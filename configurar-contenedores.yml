@@ -1,0 +1,5 @@
+---
+ - include: configurar-homer.yml
+ - include: configurar-barney.yml
+ - include: configurar-lisa.yml
+

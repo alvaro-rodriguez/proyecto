@@ -1,0 +1,6 @@
+---
+ - hosts: lisa
+   become: yes
+   become_user: root
+   roles: 
+    - httpd 

@@ -1,0 +1,14 @@
+--- 
+ - hosts: local
+   become: yes
+   become_user: root
+   
+   tasks:
+
+    - name: prueba contenedor prueba_become
+      lxc_container:
+        name: ubuntu-prueba_become
+        container_log: true
+        template: ubuntu
+        state: started
+        template_options: --release trusty

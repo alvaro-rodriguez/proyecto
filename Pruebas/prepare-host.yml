@@ -1,0 +1,12 @@
+---
+ - hosts: local
+   become: yes
+
+ - tasks:
+    - name: Install Bridge-utils 
+      become_method: sudo
+      yum:
+        name: bridge-utils
+        state: latest
+       
+      

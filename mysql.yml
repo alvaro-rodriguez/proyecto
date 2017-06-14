@@ -1,0 +1,6 @@
+---
+ - hosts: homer
+   become: yes
+   become_user: root
+   roles:
+    - bd
