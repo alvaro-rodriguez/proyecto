@@ -6,7 +6,7 @@
     - name: instalación ssh lisa
       lxc_container:
         name: lisa
-        container_command: yum update | yum install openssh-server sshpass sudo.x86_64  -y
+        container_command: yum update | yum install openssh-server sshpass sudo  -y
 
     - name: creación de usuario
       lxc_container:
