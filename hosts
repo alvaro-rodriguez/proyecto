@@ -3,6 +3,7 @@
 127.0.0.1
 
 #El siguiente grupo se auto genera al usar el script saca_ips.sh
+
 [lxc]
 10.0.4.163
 10.0.4.55 
