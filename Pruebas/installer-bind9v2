@@ -1,0 +1,9 @@
+---
+ - hosts: local
+   become: yes
+   become_user: root
+   tasks:
+    - name: instalación de bind9 desde shell ,USAR EN CASO  DE FALLAR EL PLAYBOOK ORIGINAL
+      lxc_container:
+        name: barney
+        container_command: apt-get update | apt-get install bind9 -y
