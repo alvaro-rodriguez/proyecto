@@ -4,17 +4,17 @@
 
 #El siguiente grupo se auto genera al usar el script saca_ips.sh
 
-[lxc]
-10.0.4.163
-10.0.4.55 
-10.0.4.185
-[lisa]
-10.0.4.163
-[homer]
-10.0.4.55 
-[homer:vars]
-ansible_python_interpreter=/usr/bin/python2.7
-[barney]
-10.0.4.185
+#[lxc]
+#10.0.4.163
+#10.0.4.55 
+#10.0.4.185
+#[lisa]
+#10.0.4.163
+#[homer]
+#10.0.4.55 
+#[homer:vars]
+#ansible_python_interpreter=/usr/bin/python2.7
+#[barney]
+#10.0.4.185
 
 
