@@ -1,6 +1,7 @@
 #Local es indispensable para el funcionamiento
 [local]
 127.0.0.1
+[local:vars]
 ansible_sudo_pass=usuario
 
 #El siguiente grupo se auto genera al usar el script saca_ips.sh
