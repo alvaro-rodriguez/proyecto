@@ -1,0 +1,14 @@
+--- 
+ - hosts: local
+   become: yes
+   become_user: root
+   
+   tasks:
+
+    - name: Creación del contenedor Homer 
+      lxc_container:
+        name: homer
+        container_log: true
+        template: ubuntu
+        state: started
+        template_options: --release trusty
