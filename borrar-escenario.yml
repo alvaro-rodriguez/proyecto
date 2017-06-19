@@ -5,7 +5,7 @@
      lxc_container:
        name: '{{ item }}'
        state: absent
-       with_items:
+     with_items:
         - lisa
         - homer
         - barney
