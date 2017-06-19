@@ -3,7 +3,7 @@
    become: yes
    become_user: root
    tasks:
-    - name: instalación ssh barney
+    - name: instalación sshpass y python-minimal barney
       lxc_container:
         name: barney
         container_command: apt update && apt install sshpass  python-minimal -y
