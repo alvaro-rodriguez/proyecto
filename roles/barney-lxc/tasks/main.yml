@@ -1,14 +1,8 @@
---- 
- - hosts: local
-   become: yes
-   become_user: root
-   
-   tasks:
-
-    - name: Creación del contenedor barney 
-      lxc_container:
-        name: barney 
-        container_log: true
-        template: debian
-        state: started
-        template_options: --release jessie
+---
+- name: CreaciÃ³n del contenedor barney 
+  lxc_container:
+    name: barney 
+    container_log: true
+    template: debian
+    state: started
+    template_options: --release jessie
