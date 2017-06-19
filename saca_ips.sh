@@ -16,7 +16,7 @@ echo $lisa
 #inserción de datos
 #echo -e "[lxc] \n" $barney "\n"$homer "\n" $lisa "\n [barney] \n" $barney "\n [homer] \n" $homer "\n [lisa] \n"  $lisa >> hosts
 #Versión para la demo
-echo -e "[lxc] \n"$barney "\n"$homer "\n"$lisa "\n[barney] \n"$barney "\n[homer] \n"$homer "\n[lisa] \n"$lisa[1] >> /etc/ansible/hosts
+echo -e "[lxc] \n"$barney "\n"$homer "\n"$lisa "\n[barney] \n"$barney "\n[homer] \n"$homer "\n[lisa] \n"$lisa >> /etc/ansible/hosts
 
 ## Es necesario usar la ruta completa para escribir el diccionario de ips ejecutando el script desde ansible.
 #echo -e "---\nbarney:\n - "$barney"\nhomer:\n - "$homer"\nlisa:\n - "$lisa > roles/dns/files/ips.yml
