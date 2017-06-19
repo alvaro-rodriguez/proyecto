@@ -1,8 +1,7 @@
 ---
-- include: homer.yml
-- include: lisa.yml
-- include: barney.yml
+- include: despliegue-contenedores.yml
 - include: configurar-contenedores.yml
+- include: script-ip.yml
 - include: httpd.yml
 - include: mysql.yml
 - include: dns.yml
