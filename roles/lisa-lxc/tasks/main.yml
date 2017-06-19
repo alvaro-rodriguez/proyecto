@@ -1,13 +1,7 @@
 --- 
- - hosts: local
-   become: yes
-   become_user: root
-   
-   tasks:
-
-    - name: Creación del contenedor Lisa
-      lxc_container:
-        name: lisa
-        container_log: true
-        template: centos
-        state: started
+ - name: CreaciÃ³n del contenedor Lisa
+   lxc_container:
+     name: lisa
+     container_log: true
+     template: centos
+     state: started
