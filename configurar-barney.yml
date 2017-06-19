@@ -6,12 +6,14 @@
     - name: instalación ssh barney
       lxc_container:
         name: barney
-        container_command: apt update | apt install sshpass  python-minimal -y
+        container_command: |
+          apt update | apt install sshpass  python-minimal -y
 
     - name: instalación sudo barney
       lxc_container:
         name: barney
-        container_command:  apt installsudo -y
+        container_command: |
+          apt install sudo -y
 
     - name: creación de usuario
       lxc_container:
