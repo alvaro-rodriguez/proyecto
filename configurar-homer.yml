@@ -3,7 +3,7 @@
    become: yes
    become_user: root
    tasks:
-    - name: instalación ssh homer
+    - name: instalación ssh server, sshpass y python-minimal en homer
       lxc_container:
         name: homer
         container_command: |
