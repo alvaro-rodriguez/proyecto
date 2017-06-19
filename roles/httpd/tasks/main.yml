@@ -9,5 +9,5 @@
 
  - name: reinicio de http
    service:
-     name: apache2
+     name: httpd
      state: restarted
