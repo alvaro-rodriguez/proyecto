@@ -6,8 +6,7 @@
     - name: instalación ssh server, sshpass y python-minimal en homer
       lxc_container:
         name: homer
-        container_command: |
-          apt-get update | apt-get install openssh-server sshpass python-minimal  -y
+        container_command: apt-get update && apt-get install openssh-server sshpass python-minimal -y
 
     - name: creación de usuario
       lxc_container:
