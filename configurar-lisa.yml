@@ -25,5 +25,3 @@
         container_command: |
           echo "usuario ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-    - name: Copiar la página de presentación
-      copy: src=/root/.ssh/id_rsa.pub dest=/home/usuario/.ssh/known_hosts
