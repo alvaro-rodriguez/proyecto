@@ -1,0 +1,11 @@
+---
+ - hosts: local
+   tasks:
+   - name: Destroy a container
+     lxc_container:
+       name: '{{ item }}'
+         state: absent
+          with_items:
+           - lisa
+           - homer
+           - barney
