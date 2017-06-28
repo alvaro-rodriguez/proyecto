@@ -1,3 +1,3 @@
 #!/bin/bash
 mkdir claves 
-ssh-keygen -f contenedor.key
+ssh-keygen -q -f claves/contenedor.key  -P "12345"
