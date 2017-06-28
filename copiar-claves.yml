@@ -1,0 +1,7 @@
+---
+ - hosts: local
+   become: True
+   become_user: root
+   tasks:
+    - name: Copiar clave ssh
+      copy: src=$user/proyecto/claves/contenedor.key dest= /var/lib/lxc/lisa/rootfs/home/usuario/.ssh/contenedor.key
